@@ -1,0 +1,23 @@
+HKCR
+{
+	WinScriptHost.PluginWinScript.1 = s 'PluginWinScript Class'
+	{
+		CLSID = s '{F97880BD-3C38-44DC-AC98-5952C776840D}'
+	}
+	WinScriptHost.PluginWinScript = s 'PluginWinScript Class'
+	{
+		CLSID = s '{F97880BD-3C38-44DC-AC98-5952C776840D}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F97880BD-3C38-44DC-AC98-5952C776840D} = s 'PluginWinScript Class'
+		{
+			ProgID = s 'WinScriptHost.PluginWinScript.1'
+			VersionIndependentProgID = s 'WinScriptHost.PluginWinScript'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

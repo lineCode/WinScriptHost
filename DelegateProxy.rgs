@@ -1,0 +1,23 @@
+HKCR
+{
+	WinScriptHost.DelegateProxy.1 = s 'DelegateProxy Class'
+	{
+		CLSID = s '{EB0A15CB-E94A-4BCF-861B-6828B241FA53}'
+	}
+	WinScriptHost.DelegateProxy = s 'DelegateProxy Class'
+	{
+		CLSID = s '{EB0A15CB-E94A-4BCF-861B-6828B241FA53}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {EB0A15CB-E94A-4BCF-861B-6828B241FA53} = s 'DelegateProxy Class'
+		{
+			ProgID = s 'WinScriptHost.DelegateProxy.1'
+			VersionIndependentProgID = s 'WinScriptHost.DelegateProxy'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

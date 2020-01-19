@@ -1,0 +1,90 @@
+// WinScriptHost.idl : IDL source for WinScriptHost.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (WinScriptHost.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(BC77B89E-0F28-4BC1-854B-92E9143CF1EB),
+		dual,
+		helpstring("IObjectProxy Interface"),
+		pointer_default(unique)
+	]
+	interface IObjectProxy : IDispatch
+	{
+		[id(1), helpstring("method GetType")] HRESULT GetType([out, retval] BSTR* type);
+		[id(2), helpstring("method SetAttrib")] HRESULT SetAttrib([in] BSTR key, [in] VARIANT* var);
+		[id(3), helpstring("method GetAttrib")] HRESULT GetAttrib([in] BSTR key, [out, retval] VARIANT* var);
+		[id(4), helpstring("method SetHost")] HRESULT SetHost([in] LONGLONG base);
+	};
+	
+	[
+		object,
+		uuid(F32760AD-AFC2-4F7A-87E8-CBDC062523FC),
+		dual,
+		helpstring("IDelegateProxy Interface"),
+		pointer_default(unique)
+	]
+	interface IDelegateProxy : IDispatch
+	{
+		[id(1), helpstring("method GetType")] HRESULT GetType([out, retval] BSTR* type);
+		[id(2), helpstring("method Attach")] HRESULT SetProxy([in] LONGLONG base);
+		[id(3), helpstring("method GetProxy")] HRESULT GetProxy([out, retval] LONGLONG* base);
+		[id(4), helpstring("method SetHost")] HRESULT SetHost([in] LONGLONG host);
+	};
+	
+	[
+		object,
+		uuid(7138D80B-A188-4C31-989D-2CD81A71373A),
+		dual,
+		helpstring("IPluginWinScript Interface"),
+		pointer_default(unique)
+	]
+	interface IPluginWinScript : IDispatch
+	{
+		[id(1), helpstring("method PluginMain")] HRESULT PluginMain([in] LPDISPATCH host, [in] LONGLONG vm, [out, retval] BSTR* pluginName);
+		[id(2), helpstring("method PluginConfig")] HRESULT PluginConfig([in] LONGLONG hWnd);
+	};
+
+[
+	uuid(FE1773A4-6918-46A6-9FBE-F417B6EE09B3),
+	version(1.0),
+	helpstring("WinScriptHost 1.0 Type Library")
+]
+library WINSCRIPTHOSTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	[
+		uuid(3498D505-0642-43C5-96DA-927ABED9350F),
+		helpstring("ObjectProxy Class")
+	]
+	coclass ObjectProxy
+	{
+		[default] interface IObjectProxy;
+	};
+	
+	[
+		uuid(EB0A15CB-E94A-4BCF-861B-6828B241FA53),
+		helpstring("DelegateProxy Class")
+	]
+	coclass DelegateProxy
+	{
+		[default] interface IDelegateProxy;
+	};
+	
+	[
+		uuid(F97880BD-3C38-44DC-AC98-5952C776840D),
+		helpstring("PluginWinScript Class")
+	]
+	coclass PluginWinScript
+	{
+		[default] interface IPluginWinScript;
+	};
+};

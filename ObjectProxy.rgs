@@ -1,0 +1,23 @@
+HKCR
+{
+	WinScriptHost.ObjectProxy.1 = s 'ObjectProxy Class'
+	{
+		CLSID = s '{3498D505-0642-43C5-96DA-927ABED9350F}'
+	}
+	WinScriptHost.ObjectProxy = s 'ObjectProxy Class'
+	{
+		CLSID = s '{3498D505-0642-43C5-96DA-927ABED9350F}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3498D505-0642-43C5-96DA-927ABED9350F} = s 'ObjectProxy Class'
+		{
+			ProgID = s 'WinScriptHost.ObjectProxy.1'
+			VersionIndependentProgID = s 'WinScriptHost.ObjectProxy'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

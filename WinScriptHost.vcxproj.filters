@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{237548c6-64c2-4efc-a2ff-7c56b6af332c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e1844a15-69e5-4897-b6fa-e85a3515e900}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{076cf6be-ece5-4743-b5e4-8aa4ac23e7a1}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{b68ad7aa-d8e9-4f66-8e19-43a949b81a02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Interface">
+      <UniqueIdentifier>{ee7e7f8c-4bf9-4813-bf85-f674712601c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Driver">
+      <UniqueIdentifier>{19505610-022a-41e6-a191-8ace258f1283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Driver\Thread">
+      <UniqueIdentifier>{81489e7c-4e18-4c64-8ad7-fbaf8d403fae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Driver\Thread\Pthread">
+      <UniqueIdentifier>{c50d9de3-a355-452d-a29f-9ef2a5a2695d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dlldatax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LeavesMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinScriptHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DelegateProxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectProxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginWinScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Interface\IReflect.cpp">
+      <Filter>Core\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Interface\IScript.cpp">
+      <Filter>Core\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Interface\IThread.cpp">
+      <Filter>Core\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Interface\IType.cpp">
+      <Filter>Core\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Driver\Thread\Pthread\ZThreadPthread.cpp">
+      <Filter>Core\Driver\Thread\Pthread</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Interface\IDevice.cpp">
+      <Filter>Core\Interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="WinScriptHost.idl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WinScriptHost.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dlldatax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DelegateProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginWinScript.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Interface\IReflect.h">
+      <Filter>Core\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Interface\IScript.h">
+      <Filter>Core\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Interface\IThread.h">
+      <Filter>Core\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Interface\IType.h">
+      <Filter>Core\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Driver\Thread\Pthread\ZThreadPthread.h">
+      <Filter>Core\Driver\Thread\Pthread</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Interface\IDevice.h">
+      <Filter>Core\Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="WinScriptHost.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DelegateProxy.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ObjectProxy.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PluginWinScript.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
